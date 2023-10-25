@@ -57,10 +57,13 @@
       efiSysMountPoint = "/boot/efi";
     };
 
+    systemd-boot.enable = false;
+
     grub = 
     {
       enable = true;
-      devices = ["nodev"];
+      device = "nodev";
+
       efiSupport = true;
       useOSProber = true;
 
