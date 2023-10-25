@@ -54,7 +54,7 @@
     efi = 
     {
       canTouchEfiVariables = true;
-      efiSysMountPoint = "/boot/efi";
+      efiSysMountPoint = "/boot/";
     };
 
     systemd-boot.enable = false;
@@ -62,7 +62,7 @@
     grub = 
     {
       enable = true;
-      device = "nodev";
+      devices = ["nodev"];
 
       efiSupport = true;
       useOSProber = true;
